@@ -10,14 +10,7 @@ router.get('/', function(req, res, next) {
     res.render('/', {s1: req.params.expr,s1: req.params.expr1});
 });*/
 router.post('/', function(req, res, next) {
-  
-  var errors = req.validationErrors();
-  if (errors) {
-      //req.session.errors = errors;
-      //req.session.success = false;
-  } else {
-      //req.session.success = true;
-  }
+
   var kq = '';
   var s1 = req.body.expr;
   s1 = parseFloat(s1, 10);

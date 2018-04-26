@@ -10,8 +10,7 @@ router.get('/', function(req, res, next) {
     res.render('/', {s1: req.params.expr,s1: req.params.expr1});
 });*/
 router.post('/', function(req, res, next) {
-  req.check('expr', 'Số thứ nhất -> phải là số').isNumeric();
-  req.check('expr1', 'Số thứ hai -> phải là số').isNumeric();
+  
   var errors = req.validationErrors();
   if (errors) {
       //req.session.errors = errors;
